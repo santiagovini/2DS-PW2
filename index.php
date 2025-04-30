@@ -1,27 +1,27 @@
 <?php
 
-include 'header.php';
+include 'views/templates/header.php';
 
 // Obtém o parâmetro 'aaa' da URL
-$pagina = $_GET['aaa'] ?? 'home'; // Caso 'aaa' não seja passado, assume 'home'
+$pagina = $_GET['aaa'] ?? 'views/home'; // Caso 'aaa' não seja passado, assume 'home'
 
 switch ($pagina) {
     case 'home':
-        include 'view/home.php';
+        include 'views/home.php';
         break;
     case 'login':
-        include 'view/login.php';
+        include 'views/login.php';
         break;
     case 'cadastro':
-        include 'view/cadastro.php';
+        include 'views/cadastro.php';
         break;
     case 'perfil':
-        include 'view/dashboard.php';
+        include 'views/dashboard.php';
          break;
     default:
-        include 'view/home.php';
+        include 'views/home.php';
         break;
 }
 
-include 'footer.php';
+include 'views/templates/footer.php';
 ?>

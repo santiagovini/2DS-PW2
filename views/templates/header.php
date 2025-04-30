@@ -52,7 +52,7 @@
     <nav class="navbar d-flex align-items-center">
       <!-- Botão Home com imagem -->
       <a href="?aaa=home">
-        <img src="images/mycinee.png" alt="Logo MyCine" class="logo-img">
+        <img src="views/images/mycinee.png" alt="Logo MyCine" class="logo-img">
       </a>
 
       <div class="search-wrapper">

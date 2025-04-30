@@ -6,7 +6,7 @@
 
 <div class="container mt-5">
   <h2>Cadastro</h2>
-  <form action="control/processa_cadastro.php" method="POST">
+  <form action="controllers/processa_cadastro.php" method="POST">
     <div class="mb-3">
       <label for="email" class="form-label">E-mail</label>
       <input type="email" class="form-control" id="email" name="email" required>

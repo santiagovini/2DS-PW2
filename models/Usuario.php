@@ -7,7 +7,7 @@ class Usuario {
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "cadastro";
+        $dbname = "mycine_db";
 
         $this->conn = new mysqli($servername, $username, $password, $dbname);
 

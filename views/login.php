@@ -12,7 +12,7 @@ if (isset($_GET['erro'])) {
 
 <div class="container mt-5">
   <h2>Login</h2>
-  <form action="control/auth_controller.php" method="POST">
+  <form action="controllers/auth_controller.php" method="POST">
     <div class="mb-3">
       <label for="username" class="form-label">Nome de usuário</label>
       <input type="text" class="form-control" id="username" name="username" required>

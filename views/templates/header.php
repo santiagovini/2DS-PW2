@@ -60,10 +60,19 @@
       </div>
 
       <div class="d-flex align-items-center gap-3">
-        <a class="nav-link" href="?aaa=cadastro">Cadastrar-se</a>
-        <a href="?aaa=login">
-          <button class="login-btn">Entrar</button>
+        <?php if (isset($_SESSION['usuario_id'])): ?>
+          <!-- Exibe o nome do usuário e um link para a dashboard -->
+          <a class="nav-link" href="?aaa=perfil"><?php echo $_SESSION['usuario_nome']; ?></a>
+        <!-- Botão de Logout -->
+        <a href="controllers/logout.php">
+          <button class="login-btn">Sair</button>
         </a>
+        <?php else: ?>
+          <a class="nav-link" href="?aaa=cadastro">Cadastrar-se</a>
+          <a href="?aaa=login">
+            <button class="login-btn">Entrar</button>
+          </a>
+        <?php endif; ?>
       </div>
     </nav>
 

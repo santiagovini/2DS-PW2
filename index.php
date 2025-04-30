@@ -1,9 +1,10 @@
 <?php
+session_start(); // Inicia a sessão
 
+$pagina = isset($_GET['aaa']) ? $_GET['aaa'] : 'home'; // Caso 'aaa' não seja passado, assume 'home'
+
+// Inclui o cabeçalho
 include 'views/templates/header.php';
-
-// Obtém o parâmetro 'aaa' da URL
-$pagina = $_GET['aaa'] ?? 'views/home'; // Caso 'aaa' não seja passado, assume 'home'
 
 switch ($pagina) {
     case 'home':
@@ -17,11 +18,12 @@ switch ($pagina) {
         break;
     case 'perfil':
         include 'views/dashboard.php';
-         break;
+        break;
     default:
         include 'views/home.php';
         break;
 }
 
+// Inclui o rodapé
 include 'views/templates/footer.php';
 ?>

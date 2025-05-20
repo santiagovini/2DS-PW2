@@ -16,6 +16,9 @@ switch ($pagina) {
     case 'cadastro':
         include 'views/cadastro.php';
         break;
+    case 'filmes':
+        include 'views/filmes.php';
+        break;
     case 'perfil':
         include 'views/dashboard.php';
         break;

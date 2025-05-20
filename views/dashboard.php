@@ -7,3 +7,6 @@ if (!isset($_SESSION['usuario_id'])) {
 
 <!-- Conteúdo do dashboard -->
 <h1>Bem-vindo ao seu Dashboard, <?php echo $_SESSION['usuario_nome']; ?>!</h1>
+
+<button onclick="window.location.href='index.php?aaa=filmes'">Ir para Filmes</button>
+

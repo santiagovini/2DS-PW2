@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MyCine Navbar</title>
+    <title>GuiaFut</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
       body {
-        background-color: #d2c4c2;
+        background-color:	snow;
       }
 
       .navbar {
-        background-color: #d2c4c2;
+        background-color:	snow;
         padding: 15px 30px;
       }
 
@@ -24,7 +24,7 @@
       }
 
       .login-btn {
-        background-color: black;
+        background-color: mediumblue;
         color: white;
         border: none;
         padding: 6px 12px;
@@ -34,6 +34,7 @@
       .nav-link {
         color: black !important;
         font-weight: 500;
+        color: mediumblue;
       }
 
       .search-wrapper {
@@ -45,6 +46,10 @@
       .search-input {
         width: 60%;
       }
+
+      .button{
+        color: mediumblue;
+      }
     </style>
   </head>
   <body>
@@ -52,11 +57,11 @@
     <nav class="navbar d-flex align-items-center">
       <!-- Botão Home com imagem -->
       <a href="?aaa=home">
-        <img src="views/images/mycinee.png" alt="Logo MyCine" class="logo-img">
+        <img src="views/images/gflogo.png" alt="Logo MyCine" class="logo-img">
       </a>
 
       <div class="search-wrapper">
-        <input class="form-control search-input" type="search" placeholder="Hinted search text" aria-label="Search">
+        <input class="form-control search-input" type="search" placeholder="Adicionar Time" aria-label="Search">
       </div>
 
       <div class="d-flex align-items-center gap-3">

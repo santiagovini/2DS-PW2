@@ -7,7 +7,7 @@ class Usuario {
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "mycine_db";
+        $dbname = "guiafut_db";
 
         $this->conn = new mysqli($servername, $username, $password, $dbname);
 

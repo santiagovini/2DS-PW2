@@ -5,8 +5,8 @@ if (!isset($_SESSION['usuario_id'])) {
 }
 ?>
 
-<!-- Conteúdo do dashboard -->
-<h1>Bem-vindo ao seu Dashboard, <?php echo $_SESSION['usuario_nome']; ?>!</h1>
-
-<button onclick="window.location.href='index.php?aaa=filmes'">Ir para Filmes</button>
-
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <p class="text-muted text-center" style="font-size: 16px;">
+    Ainda não foi registrado nenhum time
+  </p>
+</div>

@@ -5,7 +5,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = ""; // padrão do XAMPP
-$dbname = "mycine_db";
+$dbname = "guiafut_db";
 
 // Criando a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);

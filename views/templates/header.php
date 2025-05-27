@@ -6,81 +6,70 @@
     <title>GuiaFut</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      body {
-        background-color:	snow;
-      }
+  body {
+    background-color: snow;
+  }
 
-      .navbar {
-        background-color:	snow;
-        padding: 15px 30px;
-      }
+  .navbar {
+    background-color: snow;
+    padding: 15px 30px;
+  }
 
-      .logo-img {
-        height: 40px;
-      }
+  .logo-img {
+    height: 40px;
+  }
 
-      .form-control {
-        border-radius: 25px;
-      }
+  .login-btn {
+    background-color: mediumblue;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+  }
 
-      .login-btn {
-        background-color: mediumblue;
-        color: white;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 5px;
-      }
+  .nav-link {
+    color: black !important;
+    font-weight: 500;
+    text-decoration: none;
+  }
 
-      .nav-link {
-        color: black !important;
-        font-weight: 500;
-        color: mediumblue;
-      }
+  .nav-link:hover {
+    color: mediumblue !important;
+  }
+</style>
+<body>
+  <nav class="navbar d-flex justify-content-between align-items-center">
+  <!-- Logo -->
+  <a href="?aaa=home" class="d-flex align-items-center gap-2 text-decoration-none">
+    <img src="views/images/gflogo.png" alt="Logo GuiaFut" class="logo-img">
+    <span class="fw-bold fs-5 text-primary">GuiaFut</span>
+  </a>
 
-      .search-wrapper {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-      }
+  <!-- Menu -->
+  <div class="d-flex gap-4">
+    <a class="nav-link" href="?aaa=adicionar">Adicionar</a>
+    <a class="nav-link" href="?aaa=times">Times</a>
+    <a class="nav-link" href="?aaa=paises">Países</a>
+    <a class="nav-link" href="?aaa=sobrenos">Sobre Nós</a>
+  </div>
 
-      .search-input {
-        width: 60%;
-      }
-
-      .button{
-        color: mediumblue;
-      }
-    </style>
-  </head>
-  <body>
-
-    <nav class="navbar d-flex align-items-center">
-      <!-- Botão Home com imagem -->
-      <a href="?aaa=home">
-        <img src="views/images/gflogo.png" alt="Logo MyCine" class="logo-img">
+  <!-- Login/Cadastro ou Perfil -->
+  <div class="d-flex align-items-center gap-3">
+    <?php if (isset($_SESSION['usuario_id'])): ?>
+      <a class="nav-link" href="?aaa=perfil"><?php echo $_SESSION['usuario_nome']; ?></a>
+      <a href="controllers/logout.php">
+        <button class="login-btn">Sair</button>
       </a>
-
-      <div class="search-wrapper">
-        <input class="form-control search-input" type="search" placeholder="Adicionar Time" aria-label="Search">
-      </div>
-
-      <div class="d-flex align-items-center gap-3">
-        <?php if (isset($_SESSION['usuario_id'])): ?>
-          <!-- Exibe o nome do usuário e um link para a dashboard -->
-          <a class="nav-link" href="?aaa=perfil"><?php echo $_SESSION['usuario_nome']; ?></a>
-        <!-- Botão de Logout -->
-        <a href="controllers/logout.php">
-          <button class="login-btn">Sair</button>
-        </a>
-        <?php else: ?>
-          <a class="nav-link" href="?aaa=cadastro">Cadastrar-se</a>
-          <a href="?aaa=login">
-            <button class="login-btn">Entrar</button>
-          </a>
-        <?php endif; ?>
-      </div>
-    </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <?php else: ?>
+      <a class="nav-link" href="?aaa=cadastro">Cadastrar-se</a>
+      <a href="?aaa=login">
+        <button class="login-btn">Entrar</button>
+      </a>
+    <?php endif; ?>
+   </div>
+  </nav>
+  
+ </body>
+  </head>
+  <nav class="navbar d-flex justify-content-between align-items-center">
 </html>

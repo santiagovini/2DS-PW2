@@ -16,15 +16,15 @@ switch ($pagina) {
     case 'cadastro':
         include 'views/cadastro.php';
         break;
-    case 'filmes':
-        include 'views/filmes.php';
-        break;
     case 'perfil':
         include 'views/dashboard.php';
         break;
     default:
         include 'views/home.php';
         break;
+    case 'adicionar':
+        include 'views/adicionar.php';
+        break;    
 }
 
 // Inclui o rodapé

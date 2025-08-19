@@ -9,4 +9,5 @@ if (!isset($_SESSION['usuario_id'])) {
   <p class="text-muted text-center" style="font-size: 16px;">
     Ainda não foi registrado nenhum time
   </p>
+
 </div>

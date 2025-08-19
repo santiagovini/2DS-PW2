@@ -34,8 +34,9 @@ if ($result->num_rows === 1) {
         // Login bem-sucedido
         $_SESSION['usuario_id'] = $user['id'];
         $_SESSION['usuario_nome'] = $user['username'];
+        $_SESSION['login_success'] = true; // flag do popup
 
-        // Redireciona para o dashboard
+        // Redireciona para o dashboard (perfil)
         header("Location: ../index.php?aaa=perfil");
         exit();
     } else {
